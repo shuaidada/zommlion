@@ -8,30 +8,32 @@
     </cube-tab-bar>
     <cube-tab-panels v-model="selectedLabel">
         <cube-tab-panel v-for="(item, index) in tabs" :label="item.label" :key="index">
-        <ul>
-            <li class="tab-panel-li" v-for="(hero, index) in 20" :key="index">
-                <div class="tab-panel-li-left">
-                    <p>长沙2021年一月一号小型座谈会</p>
-                    <p> <span>开始时间:</span> <span>2021-08-09 18:00</span> </p>
-                    <p> <span>结束时间:</span> <span>2021-08-09 18:00</span> </p>
-                </div>
-                <div class="tab-panel-li-right">
-                    <p @click="$router.push({path: '/details'})">查看详情 <i class="cubeic-arrow"></i> </p>
-                    <p>编辑活动 <i class="cubeic-arrow"></i> </p>
-                    <p>签到统计 <i class="cubeic-arrow"></i> </p>
-                </div>
-            </li>
-            <!-- <li class="tab-panel-li" v-for="(hero, index) in item.heroes" :key="index">
-                {{hero}}
-            </li> -->
-        </ul>
+            <ul>
+                <li class="tab-panel-li" v-for="(hero, index) in 20" :key="index">
+                    <div class="tab-panel-li-left">
+                        <p>长沙2021年一月一号小型座谈会</p>
+                        <p> <span>开始时间:</span> <span>2021-08-09 18:00</span> </p>
+                        <p> <span>结束时间:</span> <span>2021-08-09 18:00</span> </p>
+                    </div>
+                    <div class="tab-panel-li-right">
+                        <p @click="$router.push({path: '/details'})">查看详情 <i class="cubeic-arrow"></i> </p>
+                        <p>编辑活动 <i class="cubeic-arrow"></i> </p>
+                        <p>签到统计 <i class="cubeic-arrow"></i> </p>
+                    </div>
+                </li>
+                <!-- <li class="tab-panel-li" v-for="(hero, index) in item.heroes" :key="index">
+                    {{hero}}
+                </li> -->
+            </ul>
         </cube-tab-panel>
     </cube-tab-panels>
+    <cube-button class="add-style" @click="$router.push({path: '/addActivity'})" >点击此处创建新活动</cube-button>
   </div>
 </template>
 
 
 <script>
+// import {  } from '@/api/apiRequest'
 export default {
   data () {
     return {
@@ -81,7 +83,7 @@ export default {
         padding-bottom: 5px;
         box-sizing: border-box;
         &>ul {
-            height: 566px;
+            height: 515px;
             overflow-x: hidden;
             .tab-panel-li {
                 padding: 0 7px;
@@ -119,6 +121,9 @@ export default {
             }
         }
         
+    }
+    .add-style {
+        background-color: #7AC756;
     }
 }
 </style>

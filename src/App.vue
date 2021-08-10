@@ -40,4 +40,12 @@
   }
 }
 
+.cube-picker-wheel-wrapper{
+  .cube-picker-wheel-scroll{
+    .cube-picker-wheel-item {
+      font-size: 16px;
+    }
+  }
+}
+
 </style>
