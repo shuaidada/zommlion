@@ -16,7 +16,7 @@
                     <p> <span>结束时间:</span> <span>2021-08-09 18:00</span> </p>
                 </div>
                 <div class="tab-panel-li-right">
-                    <p>查看详情 <i class="cubeic-arrow"></i> </p>
+                    <p @click="$router.push({path: '/details'})">查看详情 <i class="cubeic-arrow"></i> </p>
                     <p>编辑活动 <i class="cubeic-arrow"></i> </p>
                     <p>签到统计 <i class="cubeic-arrow"></i> </p>
                 </div>
@@ -64,7 +64,6 @@ export default {
     width: 100%;
     /deep/.cube-tab-bar {
         margin-bottom: 5px;
-        box-shadow: 0px -10px 25px #999;
         .cube-tab {
             height: 32px;
             line-height: 32px;
@@ -79,13 +78,13 @@ export default {
         }
     }
     /deep/.cube-tab-panel {
-        padding: 0 7px;
         padding-bottom: 5px;
         box-sizing: border-box;
         &>ul {
-            height: 611px;
+            height: 566px;
             overflow-x: hidden;
             .tab-panel-li {
+                padding: 0 7px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;

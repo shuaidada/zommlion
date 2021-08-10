@@ -6,8 +6,13 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: '我的活动',
     component: () => import('@/views/salesman/index.vue')
+  },
+  {
+    path: '/details',
+    name: '查看活动闲情',
+    component: () => import('@/views/salesman/details/index.vue')
   }
 ]
 
