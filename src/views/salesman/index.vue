@@ -18,7 +18,7 @@
                     <div class="tab-panel-li-right">
                         <p @click="$router.push({path: '/details'})">查看详情 <i class="cubeic-arrow"></i> </p>
                         <p>编辑活动 <i class="cubeic-arrow"></i> </p>
-                        <p>签到统计 <i class="cubeic-arrow"></i> </p>
+                        <p @click="$router.push({path: '/statistics'})">签到统计 <i class="cubeic-arrow"></i> </p>
                     </div>
                 </li>
                 <!-- <li class="tab-panel-li" v-for="(hero, index) in item.heroes" :key="index">

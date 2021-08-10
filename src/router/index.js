@@ -23,6 +23,16 @@ const routes = [
     path: '/complete',
     name: '创建成功',
     component: () => import('@/views/salesman/addActivity/complete/index.vue')
+  },
+  {
+    path: '/statistics',
+    name: '签到统计',
+    component: () => import('@/views/salesman/statistics/index.vue')
+  },
+  {
+    path: '/success',
+    name: '签到成功',
+    component: () => import('@/views/customer/success/index.vue')
   }
 ]
 
