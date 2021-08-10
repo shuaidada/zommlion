@@ -104,7 +104,7 @@ export default {
                         font-size: 16px;
                     }
                     &>p:nth-child(2) {
-                        margin: 10px 0 5px 0;
+                        margin: 10px 0 8px 0;
                     }
                 }
 
