@@ -33,7 +33,7 @@
                 <cube-input  v-model="model.name" style="width: 200px;" placeholder=''></cube-input>
             </cube-form-group>
             <cube-form-group legend='意向时间：'>
-                <cube-input  v-model="model.name" style="width: 200px;" placeholder='' @focus='startTime()'></cube-input>
+                <cube-select  v-model="model.name" style="width: 200px;" placeholder='' @focus='startTime()'></cube-select>
             </cube-form-group>
             <cube-form-group legend='施工地点：'>
                 <cube-select v-model="model.name" style="width: 200px;" :options="options"  placeholder=''></cube-select>
@@ -62,6 +62,7 @@ export default {
        options: [
            '小型活动',
            '中型活动',
+           '大型活动',
            ],
     };
   },
