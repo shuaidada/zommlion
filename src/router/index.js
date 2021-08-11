@@ -30,6 +30,11 @@ const routes = [
     component: () => import('@/views/salesman/statistics/index.vue')
   },
   {
+    path: '/customer',
+    name: '活动签到',
+    component: () => import('@/views/customer/index.vue')
+  },
+  {
     path: '/success',
     name: '签到成功',
     component: () => import('@/views/customer/success/index.vue')
