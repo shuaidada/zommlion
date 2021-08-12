@@ -33,7 +33,7 @@
 
 
 <script>
-// import {  } from '@/api/apiRequest'
+import { getPage } from '@/api/apiRequest'
 export default {
   data () {
     return {
@@ -52,11 +52,29 @@ export default {
       }]
     }
   },
+  mounted () {
+    this.getTableList(1)
+  },
+
   methods: {
     clickHandler (label) {
       // if you clicked home tab, then print 'Home'
       console.log(label)
-    }
+    },
+    getTableList( start ) {
+        getPage({ sessionId: 'f473b374-05d9-4aa9-84fb-c9377e5b6a0d', status: start, search: '', pageNum: 1, pageSize: 20  }).then((res) => {
+            console.log(res)
+        })
+        // getPage({ 
+        //     sessionId: 'f473b374-05d9-4aa9-84fb-c9377e5b6a0d',
+        //     locale: 'zh_CN',
+        //     appType:' 9',
+        //     sign: '30de2fc3aa0dd3703bf5111f39e4b477',
+        //     timestamp: '1628670545619'
+        //  }).then((res) => {
+        //     console.log(res)
+        // })
+    },
   }
 }
 </script>
